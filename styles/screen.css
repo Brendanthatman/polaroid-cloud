@@ -4,6 +4,7 @@
     --main-bg-color: #E9E9E9;
     --primary-text-color: #424242;
     --accent-color: #FF3F3C;
+    --background-size: 33px;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     font-family: "Inter", sans-serif;
     padding: 0;
     margin: 0;
+    margin-bottom: 50px;
 }
 
 header {
@@ -42,9 +44,70 @@ main {
     margin: 0;
 }
 
+main h3 {
+    text-align: center;
+    font-size: 3em;
+}
+
+main p {
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta form {
+    background: rgb(214,215,214);
+    background: linear-gradient(0deg, rgba(214,215,214,1) 0%, rgba(226,226,226,1) 100%);
+    padding: 50px;
+    border-radius: 40px;
+}
+
+.form_text {
+    font-family: "Inter", sans-serif;
+    width: 500px;
+    height: 43px;
+    padding-left: 10px;
+    border: none;
+}
+
+.form_button {
+    font-family: "Inter", sans-serif;
+    background: var(--accent-color);
+    color: var(--main-bg-color);
+    height: 45px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+}
+
 .details ul li {
-    background: url('/images/qrcode-solid.svg') no-repeat center left;
+    font-size: 1.3em;
     list-style-type: none;
-    margin: 10px 0;
-    padding: 0 0 0 40px;
+    margin: 30px 0;
+    padding: 0 0 0 55px;
+}
+
+.details ul li.wifi {
+    background: url('/images/wifi-solid.svg') no-repeat center left;
+    background-size: var(--background-size);
+}
+
+.details ul li.cloud {
+    background: url('/images/cloud-arrow-up-solid.svg') no-repeat center left;
+    background-size: var(--background-size);
+}
+
+.details ul li.qr {
+    background: url('/images/qrcode-solid.svg') no-repeat center left;
+    background-size: var(--background-size);
+}
+
+.details ul li.photo {
+    background: url('/images/photo-film-solid.svg') no-repeat center left;
+    background-size: var(--background-size);
 }
